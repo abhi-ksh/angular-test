@@ -6,3 +6,6 @@ code .
 
 Command to initiate browser sync :
 browser-sync start --server --directory --files "**/*"
+git status 
+git commit -m "comment"
+git 
