@@ -7,8 +7,8 @@
     LunchCheckController.$inject = ['$scope'];
 
     function LunchCheckController($scope) {
-        //initialize the message
         $scope.displayCheckMessage = function () {
+            //initialize the message
             $scope.outputMessage = "";
             if ($scope.inputList == undefined) {
                 $scope.inputList = "";
@@ -16,20 +16,20 @@
 
 
             $scope.outputMessage = setDisplayMessage($scope.inputList);
-            
+
             if ($scope.outputMessage == "Enjoy!" || $scope.outputMessage == "Too much.") {
                 $scope.msgStyle = {
-                    "color" : "green"
+                    "color": "green"
                 };
                 $scope.inputBoxStyle = {
-                    "border-color" : "green"
+                    "border-color": "green"
                 };
-            }else {
+            } else {
                 $scope.msgStyle = {
-                    "color" : "red"
+                    "color": "red"
                 };
                 $scope.inputBoxStyle = {
-                    "border-color" : "red"
+                    "border-color": "red"
                 };
             }
 
