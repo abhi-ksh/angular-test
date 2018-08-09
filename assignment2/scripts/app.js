@@ -1,12 +1,12 @@
 (function () {
     'use strict';
     angular.module('MyShoppingApp', [])
-        .controller('MyShoppingController1', MyShoppingController1)
-        .controller('MyShoppingController2', MyShoppingController2)
+        .controller('ToBuyController', ToBuyController)
+        .controller('AlreadyBoughtController', AlreadyBoughtController)
         .service('MyShoppingService', MyShoppingService);
 
-    MyShoppingController1.$inject = ['MyShoppingService'];
-    function MyShoppingController1(MyShoppingService) {
+    ToBuyController.$inject = ['MyShoppingService'];
+    function ToBuyController(MyShoppingService) {
         var buyList = this;
         var shoppingList = [];
 
@@ -19,8 +19,8 @@
     }
 
 
-    MyShoppingController2.$inject = ['MyShoppingService'];
-    function MyShoppingController2(MyShoppingService) {
+    AlreadyBoughtController.$inject = ['MyShoppingService'];
+    function AlreadyBoughtController(MyShoppingService) {
         var boughtList = this;
         var shoppingList = [];
 
