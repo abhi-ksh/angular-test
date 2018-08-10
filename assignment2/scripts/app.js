@@ -15,6 +15,7 @@
 
         buyList.checkOffItem = function (itemIndex) {
             MyShoppingService.checkOffItem(itemIndex);
+            
         };
     }
 
