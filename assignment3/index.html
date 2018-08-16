@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="SearchApp">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script src="./scripts/app.js"></script>
+
+  </head>
+<body ng-controller="SearchController as searcher">
+   <div class="container">
+    <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+    <div class="form-group">
+      <input type="text" placeholder="search term" class="form-control" ng-model="searcher.srchText">
+      <!-- {{ searcher.srchText }} -->
+    </div>
+    <div class="form-group narrow-button">
+      <button class="btn btn-primary" ng-click="searcher.getMatchingMenuItems(searcher.srchText)">Narrow It Down For Me!</button>
+    </div>
+
+    <!-- found-items should be implemented as a component -->
+    <found-items filtered-list="searcher.filteredList" 
+                 remove-item="searcher.removeItem($index)"
+                 srch-text="searcher.srchText"
+                 found-items-flag="searcher.foundItemsFlag">
+    </found-items>
+    <!-- <br>
+    <h3>List of Menu Items</h3>
+    <ul>
+      <li ng-repeat="item in searcher.filteredList">
+        {{ item.name }}, {{ item.short_name }}, {{ item.description }} <span><button class="btn btn-primary" ng-click="searcher.removeItem($index)">I don't want this</button></span>
+      </li>
+    </ul> -->
+
+  </div>
+
+</body>
+</html>

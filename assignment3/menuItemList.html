@@ -1,0 +1,41 @@
+<div ng-if="(found.filteredList.length > 0)">
+  <br>
+  <br>
+  <h2 align="left">
+    List of Menu Items
+  </h2>
+  <table style="width:100%">
+    <tr>
+      <th>Item Name</th>
+      <th>Item Code</th>
+      <th>Item Description</th>
+    </tr>
+    <tr ng-repeat="item in found.filteredList">
+      <td>{{ item.name }}</td>
+      <td>{{ item.short_name }}</td>
+      <td>{{ item.description }}</td>
+      <td>
+        <span>
+          <button ng-click="found.removeItem({index: $index})">Don't want this one!</button>
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
+<!-- <ul>
+  <li ng-repeat="item in found.filteredList">
+    {{ item.name }}, {{ item.short_name }}, {{ item.description }}
+    <span>
+      <button ng-click="found.removeItem({index: $index})">I don't want this</button>
+    </span>
+  </li>
+</ul> -->
+
+<div ng-if="!found.foundItemsFlag">
+  <br>
+  <br>
+  <h4 align="left" style="color:Tomato;">
+    Nothing found.
+  </h4>
+  </p>
+</div>
