@@ -1,0 +1,11 @@
+<table id="menuitem">
+  <tr>
+    <th>Category List</th>
+  </tr>
+
+  <tr ng-repeat="item in $ctrl.items" ui-sref="itemDetail({id: $index})">
+    <td>
+      {{ item.name }}
+    </td>
+  </tr>
+</table>

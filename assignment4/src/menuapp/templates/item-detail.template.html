@@ -1,0 +1,26 @@
+<a ui-sref="home" class="header">Home</a> &lt; <a ui-sref="mainList" class="header">List</a> &lt;
+<span class="header">{{ itemDetail.category }}</span>
+
+<!-- <ol>
+    <li ng-repeat="menuItem in itemDetail.menuItems">
+       {{ menuItem.name }}
+    </li>
+</ol>
+   -->
+
+<table id="menuitem">
+    <tr>
+        <th>Item name</th>
+        <th>Description</th>
+    </tr>
+
+    <tr ng-repeat="menuItem in itemDetail.menuItems" ) ">
+      <td>
+        {{ menuItem.name }}
+      </td>
+      <td>
+          {{ menuItem.description}}
+      </td>
+
+    </tr>
+</table>
